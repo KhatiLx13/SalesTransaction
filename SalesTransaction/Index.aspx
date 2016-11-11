@@ -33,11 +33,11 @@
                             
                                 <fieldset>
                                     <div class="form-group">
-                                        <asp:TextBox runat="server" ID="txtName" class="form-control" placeholder="Please enter User NAme" ></asp:TextBox>
+                                        <asp:TextBox runat="server" ID="txtName" class="form-control" placeholder="Please enter User NAme" AutoComplete="False" ></asp:TextBox>
                                         
                                     </div>
                                     <div class="form-group">
-                                        <asp:TextBox runat="server" ID="txtPassword" class="form-control" placeholder="Please enterPassword" ></asp:TextBox>
+                                        <asp:TextBox runat="server" ID="txtPassword" TextMode="Password"  class="form-control" placeholder="Please enterPassword"></asp:TextBox>
                                     </div>
                                    
                                     <!-- Change this to a button or input when using this as a form -->

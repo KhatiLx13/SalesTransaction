@@ -25,7 +25,10 @@ namespace SalesTransaction.Pages
                     BindTransaction();
                     ddlCustomer.Enabled = false;
                     btnSave.Text = "Update";
-
+                }
+                if (Session["UserId"] == null || Convert.ToInt32(Session["UserId"]) < 0)
+                {
+                    Response.Redirect("~/Index.aspx");
                 }
             }
         }

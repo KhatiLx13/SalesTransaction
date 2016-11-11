@@ -277,6 +277,9 @@
                              <li>
                                 <a href="/Pages/ViewAllTransaction.aspx"><i class="fa fa-dashboard fa-fw"></i>View All Transaction</a>
                             </li>
+                             <li>
+                                <a href="/Pages/SalesOnDate.aspx"><i class="fa fa-dashboard fa-fw"></i>Invoice Total</a>
+                            </li>
                             <li>
                                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Charts<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">

@@ -171,6 +171,17 @@ namespace DAL
            return dt;
        }
 
+       public DataTable SalesOnDate()
+       {
+           DbCommand cmd = Db.GetStoredProcCommand("sp_fetch_daily_sales");
+           DataSet ds = null;
+           ds = Db.ExecuteDataSet(cmd);
+           DataTable dt = new DataTable();
+           if (ds != null && ds.Tables.Count > 0)
+               dt = ds.Tables[0];
+           return dt;
+       }
+
 
 
     }

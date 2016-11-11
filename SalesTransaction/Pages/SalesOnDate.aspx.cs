@@ -14,9 +14,9 @@ namespace SalesTransaction.Pages
         TransactionDAL objDa=new TransactionDAL();
         protected void Page_Load(object sender, EventArgs e)
         {
-            BindTransaction();
+            BindSalesOnDate();
         }
-        private void BindTransaction()
+        private void BindSalesOnDate()
         {
             DataTable dt = null;
             dt = objDa.SalesOnDate();
@@ -28,6 +28,12 @@ namespace SalesTransaction.Pages
                 lvTotalByDate.DataBind();
             }
 
+        }
+
+        protected void lbEdit_OnCommand(object sender, CommandEventArgs e)
+        {
+            Session["Id"] = e.CommandArgument.ToString();
+            Response.Redirect("DaillySales.aspx?Id=" + Session["Id"]);
         }
     }
 }

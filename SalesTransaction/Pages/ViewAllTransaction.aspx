@@ -66,9 +66,6 @@
                                 <td>
                                     <asp:LinkButton ID="lbEdit" CssClass="green btn btn-small" runat="server" CommandName="edit" CommandArgument='<%#Eval("invoice_id") %>'  OnCommand="lbEdit_OnCommand" ToolTip="Edit"><i class="gicon-edit"></i>Edit</asp:LinkButton>
                                
-                                    <asp:LinkButton ID="lbtnView" CssClass="green btn btn-small" runat="server" CommandName="view" CommandArgument='<%#Eval("txn_id") %>' ToolTip="View" ><i class="gicon-eye-open">View</i></asp:LinkButton>
-                                
-                                    <asp:LinkButton ID="lbtnRemove" CssClass="green btn btn-small" runat="server" CommandName="remove" CommandArgument='<%#Eval("txn_id") %>' ToolTip="Remove"><i class="gicon-remove">Remove</i></asp:LinkButton>
                                 </td>
                             </tr>
                         </ItemTemplate>

@@ -51,7 +51,7 @@ namespace DAL
            {
                DbCommand cmd = Db.GetStoredProcCommand("sp_add_invoice");
                Db.AddInParameter(cmd, "@invoice_no", DbType.Int32, objCom.invoiceNo);
-               Db.AddInParameter(cmd, "@date", DbType.Date, objCom.date);
+               Db.AddInParameter(cmd, "@date", DbType.String, objCom.date);
                Db.AddInParameter(cmd, "@txn_id", DbType.Int32, objCom.txnId);
                Db.AddInParameter(cmd, "@total", DbType.Int32, objCom.total);
                Db.AddInParameter(cmd, "@user_id", DbType.Int32, objCom.userId);
@@ -174,6 +174,18 @@ namespace DAL
        public DataTable SalesOnDate()
        {
            DbCommand cmd = Db.GetStoredProcCommand("sp_fetch_daily_sales");
+           DataSet ds = null;
+           ds = Db.ExecuteDataSet(cmd);
+           DataTable dt = new DataTable();
+           if (ds != null && ds.Tables.Count > 0)
+               dt = ds.Tables[0];
+           return dt;
+       }
+
+       public DataTable SalesPerDay(TransactionCom objCom)
+       {
+           DbCommand cmd = Db.GetStoredProcCommand("sp_fetch_daily_details");
+           Db.AddInParameter(cmd, "@date", DbType.Date, objCom.date);
            DataSet ds = null;
            ds = Db.ExecuteDataSet(cmd);
            DataTable dt = new DataTable();

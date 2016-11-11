@@ -13,7 +13,7 @@ namespace Common
         public string custNumber { get; set; }
         public int invoiceId { get; set; }
         public int invoiceNo { get; set; }
-        public DateTime date { get; set; }
+        public string date { get; set; }
         public int quantity { get; set; }
         public int amount { get; set; }
         public int total { get; set; }

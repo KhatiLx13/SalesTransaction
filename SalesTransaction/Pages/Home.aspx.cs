@@ -88,7 +88,7 @@ namespace SalesTransaction.Pages
             {
                 objCom.invoiceNo = Convert.ToInt32(txtInvoiceNo.Text);
             }
-            objCom.date=DateTime.Today;
+            objCom.date=DateTime.Today.ToString("MM/dd/yyyy");
 
             if (Request.QueryString["Id"] != null)
             {
@@ -146,7 +146,7 @@ namespace SalesTransaction.Pages
             objCom.amount = Convert.ToInt32(ddlQuantity.SelectedValue) * Convert.ToInt32(lblRate.Text);
             txtAmount.Text = Convert.ToString(objCom.amount);
             objCom.custId = Convert.ToInt32(ddlCustomer.SelectedValue);
-            objCom.date = DateTime.Today;
+            
             
         }
 

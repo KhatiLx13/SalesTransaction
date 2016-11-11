@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pages\AddEditProduct.aspx" />
+    <Content Include="Pages\DaillySales.aspx" />
     <Content Include="Pages\SalesOnDate.aspx" />
     <Content Include="Pages\ViewAllTransaction.aspx" />
     <Content Include="Scripts\dataTables.bootstrap.min.js" />
@@ -102,6 +103,13 @@
     </Compile>
     <Compile Include="Pages\AddEditProduct.aspx.designer.cs">
       <DependentUpon>AddEditProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DaillySales.aspx.cs">
+      <DependentUpon>DaillySales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\DaillySales.aspx.designer.cs">
+      <DependentUpon>DaillySales.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

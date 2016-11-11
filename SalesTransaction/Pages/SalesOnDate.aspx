@@ -41,12 +41,9 @@
                                     <%# Eval("Total") %>
                                 </td>
                                 <td>
-                                    <asp:LinkButton ID="lbEdit" CssClass="green btn btn-small" runat="server" CommandName="edit"  ToolTip="Edit"><i class="gicon-edit"></i>Show Detail</asp:LinkButton>
+                                    <asp:LinkButton ID="lbEdit" CssClass="green btn btn-small" runat="server" CommandName="edit" CommandArgument='<%#Eval("date") %>'   OnCommand="lbEdit_OnCommand"  ToolTip="Edit"><i class="gicon-edit"></i>Show Detail</asp:LinkButton>
                                
-                                    <asp:LinkButton ID="lbtnView" CssClass="green btn btn-small" runat="server" CommandName="view"  ToolTip="View" ><i class="gicon-eye-open">View</i></asp:LinkButton>
-                                
-                                    <asp:LinkButton ID="lbtnRemove" CssClass="green btn btn-small" runat="server" CommandName="remove"  ToolTip="Remove"><i class="gicon-remove">Remove</i></asp:LinkButton>
-                                </td>
+                                       </td>
                             </tr>
                         </ItemTemplate>
                         </asp:ListView>
